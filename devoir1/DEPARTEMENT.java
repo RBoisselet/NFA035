@@ -45,7 +45,7 @@ public class DEPARTEMENT {
 			}
 		}
 		if (!found) {
-			System.out.println("La liste cherchée n'est pas listée dans le guide");
+			System.out.println("\nLa ville cherchée n'est pas listée dans le guide");
 		}
 	}
 	
@@ -63,7 +63,7 @@ public class DEPARTEMENT {
 			temp = this._dep.get(key);
 			clients += temp.getClients();
 		}
-		System.out.println("Les hôtels du département " + this._dep_name +
+		System.out.println("\nLes hôtels du département " + this._dep_name +
 		" ont reçu " + clients + " clients.");
 	}
 
@@ -75,6 +75,7 @@ public class DEPARTEMENT {
 
 		keys = this._dep.keySet();
 		iter = keys.iterator();
+		System.out.println("");
 		System.out.println(String.join("", Collections.nCopies(40, "-")));
 		System.out.println("Répertoire des hôtels du département " + this._dep_name + " :");
 		System.out.println(String.join("", Collections.nCopies(40, "-")));
