@@ -15,13 +15,13 @@ public class DEPARTEMENT {
 		System.out.println("Voulez-vous entrer une nouvelle ville ? (o/n)");
 		choice = Lire.c();
 		while (Character.toLowerCase(choice) == 'o') {
-		System.out.println("Nom de la ville :");
-		String city_name = Lire.S();
-		VILLE temp = new VILLE(city_name);
-		temp.addHotels();
-		this._dep.put(city_name, temp);
-		System.out.println("Voulez-vous entrer une nouvelle ville ? (o/n)");
-		choice = Lire.c();
+			System.out.println("Nom de la ville :");
+			String city_name = Lire.S();
+			VILLE temp = new VILLE(city_name);
+			temp.addHotels();
+			this._dep.put(city_name, temp);
+			System.out.println("Voulez-vous entrer une nouvelle ville ? (o/n)");
+			choice = Lire.c();
 		}
 
 	}
@@ -63,7 +63,8 @@ public class DEPARTEMENT {
 			temp = this._dep.get(key);
 			clients += temp.getClients();
 		}
-		System.out.println(clients);
+		System.out.println("Les hôtels du département " + this._dep_name +
+		" ont reçu " + clients + " clients.");
 	}
 
 	public void displayDep() {
